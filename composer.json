@@ -1,0 +1,27 @@
+{
+  "name": "mrcrankhank/laravel-version",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "MrCrankHank",
+      "email": "mail@alexander-hank.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "MrCrankHank\\LaravelVersion\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MrCrankHank\\LaravelVersion\\VersionServiceProvider"
+      ]
+    }
+  }
+}
