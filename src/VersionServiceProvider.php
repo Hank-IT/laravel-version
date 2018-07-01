@@ -13,13 +13,7 @@ class VersionServiceProvider extends ServiceProvider
             __DIR__.'/../config/version.php' => config_path('version.php'),
         ], 'config');
 
-        $data = [];
-
-        if (file_exists(base_path(config('version.filename', 'version.json')))) {
-            $data = json_decode(file_get_contents(base_path(config('version.filename', 'version.json'))), true);
-        }
-
-        $version = new Version($data);
+        $version = version();
 
         View::composer('*', function ($view) use ($version) {
             $view->with('version', $version);

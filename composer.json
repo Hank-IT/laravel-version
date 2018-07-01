@@ -15,7 +15,10 @@
   "autoload": {
     "psr-4": {
       "MrCrankHank\\LaravelVersion\\": "src"
-    }
+    },
+    "files": [
+      "src/helpers.php"
+    ]
   },
   "extra": {
     "laravel": {
